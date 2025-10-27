@@ -1,0 +1,59 @@
+# Exclude unnecessary files from Docker build context
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints/
+notebooks/
+
+# Data and datasets
+barcode_dataset/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+
+# Model checkpoints (except the one we need)
+checkpoints/detector_epoch_*.pt
+checkpoints_v2/best_model.pt
+checkpoints_v2/detector_epoch_*.pt
+*.pt
+!checkpoints_v2/latest_model.pt
+
+# Training artifacts
+runs/
+wandb/
+*.log
+
+# Documentation
+*.md
+!api/README.md
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Misc
+baselines/
+*.json
+*.yaml
+upload_to_hf.py
+main.py

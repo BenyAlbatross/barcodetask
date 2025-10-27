@@ -1,0 +1,48 @@
+# RT-DETR baseline configuration
+# YOLO-style augmentation defaults
+
+# Model and data
+model: rtdetr-l.pt
+data: barcode_dataset/data.yaml
+
+# Training parameters
+epochs: 20
+batch: 8
+imgsz: 640
+
+# Optimizer settings
+optimizer: SGD
+# hparams default
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+
+# Augmentation settings (YOLO defaults)
+hsv_h: 0.015         # hue
+hsv_s: 0.7           # saturation
+hsv_v: 0.4           # brightness
+degrees: 0.0        # rotation
+translate: 0.1       # translation
+scale: 0.5           # scale
+shear: 0.0           # shear
+perspective: 0.0     # perspective
+flipud: 0.0          # vertical flip
+fliplr: 0.5          # horizontal flip
+mosaic: 1.0          # mosaic augmentation
+mixup: 0.0           # mixup
+erasing: 0.4
+
+# Output settings
+project: runs/barcode-detr
+name: rtdetr_l_baseline
+exist_ok: True
+save: True
+save_period: 10
+plots: True
+verbose: True
+
+# Validation
+val: True
+split: val

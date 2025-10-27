@@ -1,7 +1,0 @@
-names:
-  0: barcode
-nc: 1
-path: barcode_dataset
-test: test
-train: train
-val: val

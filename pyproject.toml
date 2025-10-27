@@ -16,4 +16,8 @@ dependencies = [
     "pandas>=2.0.0",
     "huggingface-hub>=0.36.0",
     "dotenv>=0.9.9",
+    "fastapi>=0.120.0",
+    "uvicorn>=0.38.0",
+    "python-multipart>=0.0.20",
+    "gradio>=5.49.1",
 ]

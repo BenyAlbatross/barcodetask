@@ -1,0 +1,48 @@
+# No augmentation configuration for baseline comparison
+# Base configuration - all augmentations disabled
+
+# Model and data
+model: yolo11n
+data: barcode_dataset/data.yaml
+
+# Training parameters
+epochs: 100
+batch: 16
+imgsz: 640
+patience: 100
+
+# Optimizer settings
+optimizer: SGD
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+
+# Augmentation settings (ALL DISABLED)
+degrees: 0.0         # rotation
+translate: 0.0       # translation
+scale: 0.0           # scale
+shear: 0.0           # shear
+perspective: 0.0     # perspective
+flipud: 0.0          # vertical flip
+fliplr: 0.0          # horizontal flip
+mosaic: 0.0          # mosaic augmentation
+mixup: 0.0           # mixup
+copy_paste: 0.0      # copy-paste
+hsv_h: 0.0           # hue
+hsv_s: 0.0           # saturation
+hsv_v: 0.0           # brightness
+
+# Output settings
+project: runs/barcode-yolo
+name: yolo11n_no_aug
+exist_ok: True
+save: True
+save_period: 10
+plots: True
+verbose: True
+
+# Validation
+val: True
+split: val

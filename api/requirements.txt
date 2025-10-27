@@ -1,0 +1,17 @@
+# Barcode Detection API - Dependencies
+# Python 3.12+
+
+# Web Framework
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+python-multipart==0.0.12
+
+# Deep Learning - CPU Only
+torch==2.5.1
+torchvision==0.20.1
+
+# Image Processing
+Pillow==11.0.0
+
+# Utilities
+numpy==2.1.3
